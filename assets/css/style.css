@@ -1,0 +1,51 @@
+.container
+{
+    display: flex;
+    flex-direction: row;
+    height: 10rem;
+    width: 45rem;
+    font-size: 5rem;
+    text-align: center;
+    background-color: rgb(12, 37, 182);
+}
+
+.box
+{
+    height: fit-content;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 10rem;
+    height: 8rem;
+    background-color: rgb(0, 0, 0);
+}
+
+.tick
+{
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.hours
+{
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+}
+
+
+.minutes
+{
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+}
+
+.seconds
+{
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+}
+
+.text
+{
+    margin-top: 1rem;
+    color: white;
+}
