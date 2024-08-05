@@ -3,9 +3,16 @@ import ClockView from "./clock-view.js";
 
 console.log('main.js loaded..');
 
-const clock = document.querySelector('.container');
+const clock = new ClockModel(3601);
+console.log(clock.getTime());
 
-const clockModel = new ClockModel(valueName);
-const hoursView = new ClockView(clock, clockModel);
-const minutesView = new ClockView(clock, clockModel);
-const secundesView = new ClockView(clock, clockModel);
+// const clock = document.querySelector('.container');
+
+// const hoursModel = new ClockModel('hours');
+// const hoursView = new ClockView(clock, hoursModel);
+
+// const minutesModel = new ClockModel('minutes');
+// const minutesView = new ClockView(clock, minutesModel);
+
+// const secondsModel = new ClockModel('seconds');
+// const secundesView = new ClockView(clock, secondsModel);

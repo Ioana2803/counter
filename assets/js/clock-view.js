@@ -23,6 +23,7 @@ export default class ClockView{
         this.clockBoxes.append(this.text);
 
         this.tick = document.createElement('div');
+        this.tick.classList.add('text');
         this.tick.innerText = ':';
         this.parentDOMElement.append(this.tick);
     }
