@@ -1,18 +1,30 @@
-import ClockModel from "./clock-model.js";
-import ClockView from "./clock-view.js";
+import CounterModel from "./counter-model.js";
+import CounterView from "./counter-view.js";
 
 console.log('main.js loaded..');
+const start = document.querySelector('.start');
+const pause = document.querySelector('.pause');
+const reset = document.querySelector('.reset');
 
-const clock = new ClockModel(3601);
-console.log(clock.getTime());
+const counterM = new CounterModel();
+const counterV = new CounterView();
+counterM.addObserver(counterV);
 
-// const clock = document.querySelector('.container');
+// const counterV2 = new CounterView();
+// counterM.addObserver(counterV2);
 
-// const hoursModel = new ClockModel('hours');
-// const hoursView = new ClockView(clock, hoursModel);
 
-// const minutesModel = new ClockModel('minutes');
-// const minutesView = new ClockView(clock, minutesModel);
+start.addEventListener('click', () => counterM.start());
+pause.addEventListener('click', () => counterM.pause());
+reset.addEventListener('click', () => counterM.reset());
 
-// const secondsModel = new ClockModel('seconds');
-// const secundesView = new ClockView(clock, secondsModel);
+// const counter = document.querySelector('.container');
+
+// const hoursModel = new CounterModel('hours');
+// const hoursView = new CounterView(counter, hoursModel);
+
+// const minutesModel = new CounterModel('minutes');
+// const minutesView = new CounterView(counter, minutesModel);
+
+// const secondsModel = new CounterModel('seconds');
+// const secundesView = new CounterView(counter, secondsModel);
