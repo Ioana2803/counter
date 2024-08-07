@@ -1,17 +1,22 @@
 body
 {
     font-family: "Optima", sans-serif;
+    background: rgb(116,83,233);
+background: linear-gradient(45deg, rgba(116,83,233,1) 0%, rgba(135,135,241,1) 41%, rgba(210,103,249,1) 100%);
 }
 
 .container
 {
     width: 45rem;
-    margin-left: 25vw;
-    margin-right: 25vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .counter
 {
+    
     display: flex;
     flex-direction: row;
     align-items: center;
