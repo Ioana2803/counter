@@ -15,24 +15,23 @@ export default class CounterView{
         this.hoursBox.classList.add(`hours`, 'box');
         this.parentDOMElement.append(this.hoursBox);
         
-        this.hext = document.createElement('div');
-        this.text.classList.add(`hoursT`);
-        this.text.innerText = "00";
-        this.hoursBox.append(this.text);
+        this.hText = document.createElement('div');
+        this.hText.classList.add(`hoursT`);
+        this.hoursBox.append(this.hText);
         
         this.tick = document.createElement('div');
         this.tick.classList.add('text');
         this.tick.innerText = ':';
         this.parentDOMElement.append(this.tick);
         
+
         this.minutesBox = document.createElement('div');
         this.minutesBox.classList.add(`minutes`, 'box');
         this.parentDOMElement.append(this.minutesBox);
         
-        this.text = document.createElement('div');
-        this.text.classList.add(`minutesT`);
-        this.text.innerText = "00";
-        this.minutesBox.append(this.text);
+        this.mText = document.createElement('div');
+        this.mText.classList.add(`minutesT`);
+        this.minutesBox.append(this.mText);
 
         this.tick = document.createElement('div');
         this.tick.classList.add('text');
@@ -46,11 +45,13 @@ export default class CounterView{
     
         this.sText = document.createElement('div');
         this.sText.classList.add(`secondsT`);
-        this.sText.innerText = "00";
         this.secondsBox.append(this.sText);
     }
     
     update(time){
         console.log(time);
+        this.sText.innerText = time.seconds;
+        this.mText.innerText = time.minutes;
+        this.hText.innerText = time.hours;
     }
 }
