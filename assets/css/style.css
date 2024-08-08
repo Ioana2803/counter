@@ -3,7 +3,7 @@
     --box-height: 8rem;
     --numbers-color: white;
     --text-font-size: calc(var(--box-font-size) - 1rem);
-    --text-height: 35 / 100 * var(--box-height) + "rem";
+    --text-height: calc(var(--box-height) - var(--box-height) * 35 / 100) + "rem";
     --button-width: 5rem;
 }
 
@@ -72,7 +72,7 @@ body
     display: flex;
     color: rgb(158, 154, 154);
     font-size: var(--text-font-size);
-    height: var(--text-height);
+    height: 5.2rem;
 }
 
 .buttons
