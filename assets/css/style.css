@@ -2,14 +2,17 @@
     --box-font-size: 5rem;
     --box-height: 8rem;
     --numbers-color: white;
-    --text-font-size: calc(var(--box-font-size) - 1rem);
-    --text-height: calc(var(--box-height) - var(--box-height) * 35 / 100) + "rem";
+    --separators-font-size: calc(var(--box-font-size) - 1rem);
+    --separators-height: calc(var(--box-height) * 0.7);
     --button-width: 5rem;
 }
 
 body
 {
-    font-family: "Optima", sans-serif;
+    font-family: "Afacad", sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>; */
+    font-style: normal;
     background: linear-gradient(45deg, rgba(80,211,238,1) 0%, rgba(114,144,240,1) 41%, rgba(210,103,249,1) 100%);
     background-size: cover;
 }
@@ -68,12 +71,12 @@ body
     color: var(--numbers-color);
 }
 
-.text
+.separators
 {
     display: flex;
     color: rgb(158, 154, 154);
-    font-size: var(--text-font-size);
-    height: 5.2rem;
+    font-size: var(--separators-font-size);
+    padding-bottom: calc(var(--separators-height)*0.18);
 }
 
 .buttons
@@ -127,15 +130,15 @@ body
         margin: 0.5rem 1.2rem 0.5rem 1.2rem;
     }
 
-    .text
+    .separators
     {
         font-size: 3rem;
-        height: var(--text-height);
+        padding-bottom: calc(var(--separators-height)*0.1);
     }
 
     .buttons
     {
-        height: 2rem;
+        height: 2.5rem;
         margin-top: 1rem;
     }
 
@@ -170,15 +173,15 @@ body
         margin: 0.5rem 1rem 0.5rem 1rem;
     }
 
-    .text
+    .separators
     {
         font-size: 2.5rem;
-        height: var(--text-height);
+        padding-bottom: calc(var(--separators-height)*0.05);
     }
 
     .buttons
     {
-        height: 2rem;
+        height: 2.5rem;
         margin-top: 1.5rem;
     }
 

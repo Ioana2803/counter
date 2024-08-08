@@ -20,7 +20,7 @@ export default class CounterView{
         this.hoursBox.append(this.hText);
         
         this.tick = document.createElement('div');
-        this.tick.classList.add('text');
+        this.tick.classList.add('separators');
         this.tick.innerText = ':';
         this.parentDOMElement.append(this.tick);
         
@@ -34,7 +34,7 @@ export default class CounterView{
         this.minutesBox.append(this.mText);
 
         this.tick = document.createElement('div');
-        this.tick.classList.add('text');
+        this.tick.classList.add('separators');
         this.tick.innerText = ':';
         this.parentDOMElement.append(this.tick);
 
