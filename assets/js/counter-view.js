@@ -49,7 +49,7 @@ export default class CounterView{
     }
     
     update(time){
-        console.log(time);
+        // console.log(time);
         this.sText.innerText = time.seconds;
         this.mText.innerText = time.minutes;
         this.hText.innerText = time.hours;
