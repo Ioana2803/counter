@@ -114,15 +114,16 @@ body
 
     .box
     {
-        font-size: 380%;
-        width: 20%;
+        font-size: 4rem;
         height: 7rem;
+        width: 13vw;
         margin: 0.5rem 1.2rem 0.5rem 1.2rem;
     }
 
     .text
     {
-        font-size: 300%;
+        font-size: 3rem;
+        height: var(--text-height);
     }
 
     .buttons
@@ -142,8 +143,8 @@ body
     }
 }
 
-/* medium mobile 375 */
-@media only screen and (max-width: 425px){ 
+/*large> mobile*/
+@media only screen and (max-width: 488px){ 
     .container
     {
         width: 90vw;
@@ -156,15 +157,16 @@ body
 
     .box
     {
-        font-size: 330%;
-        width: 20%;
+        font-size: 3.5rem;
         height: 6rem;
+        width: 13vw;
         margin: 0.5rem 1rem 0.5rem 1rem;
     }
 
     .text
     {
-        font-size: 300%;
+        font-size: 2.5rem;
+        height: var(--text-height);
     }
 
     .buttons
