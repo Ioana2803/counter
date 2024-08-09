@@ -2,19 +2,18 @@ import CounterModel from "./counter-model.js";
 import CounterView from "./counter-view.js";
 
 console.log('main.js loaded..');
-const counter = document.querySelector('.counter');
-const buttons = document.querySelector('.buttons');
-//container
+const container = document.querySelector('.container');
 
 const counterM = new CounterModel();
-const counterV = new CounterView(counter, buttons);
+const counterV = new CounterView(container);
 counterM.addObserver(counterV);
+
+// const counterV2 = new CounterView();
+// counterM.addObserver(counterV2);
 
 const start = document.querySelector('.start');
 const pause = document.querySelector('.pause');
 const reset = document.querySelector('.reset');
-// const counterV2 = new CounterView();
-// counterM.addObserver(counterV2);
 
 
 start.addEventListener('click', () => counterM.start());
