@@ -17,8 +17,15 @@ body
     background-size: cover;
 }
 
+/* .parent{
+    display: flex;
+    flex-direction: column;
+} */
+
 .container
 {
+    /* display: flex;
+    flex-direction: column; */
     width: 45rem;
     position: absolute;
     top: 50%;

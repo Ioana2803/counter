@@ -2,13 +2,14 @@ import CounterModel from "./counter-model.js";
 import CounterView from "./counter-view.js";
 
 console.log('main.js loaded..');
-const container = document.querySelector('.container');
+const container = document.querySelector('.parent');
 
 const counterM = new CounterModel();
-const counterV = new CounterView(container);
-counterM.addObserver(counterV);
 
-// const counterV2 = new CounterView();
+const counterV1 = new CounterView(container);
+counterM.addObserver(counterV1);
+
+// const counterV2 = new CounterView(container);
 // counterM.addObserver(counterV2);
 
 const start = document.querySelector('.start');

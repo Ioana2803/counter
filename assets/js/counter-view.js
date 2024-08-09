@@ -1,6 +1,6 @@
 export default class CounterView{
-    constructor(containerDOMElement){
-        this.containerDOMElement = containerDOMElement;
+    constructor(parentDOMElement){
+        this.parentDOMElement = parentDOMElement;
         
         this.init();
     }
@@ -8,10 +8,15 @@ export default class CounterView{
     init(){
         console.log('Initialising Counter DOM elements...');
         
+        //creating container div
+        this.containerDiv = document.createElement('div');
+        this.containerDiv.classList.add('container');
+        this.parentDOMElement.append(this.containerDiv);
+
         //creating counter div
         this.counterDiv = document.createElement('div');
         this.counterDiv.classList.add('counter');
-        this.containerDOMElement.append(this.counterDiv);
+        this.containerDiv.append(this.counterDiv);
 
         // creating the counter boxes
         this.hoursBox = document.createElement('div');
@@ -53,7 +58,7 @@ export default class CounterView{
         //creating buttons div
         this.buttonsDiv = document.createElement('div');
         this.buttonsDiv.classList.add('buttons');
-        this.containerDOMElement.append(this.buttonsDiv);
+        this.containerDiv.append(this.buttonsDiv);
 
         //creating the start button
         this.startBtn = document.createElement('button');
