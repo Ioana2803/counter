@@ -21,6 +21,24 @@ export default class CounterModel{
         }
     }
 
+    getAvailableActions(){
+        console.log('detecting avlbl actions...');
+        console.log(`interval: ${this.interval}`);
+        
+        return {
+            canBeStarted: !Boolean(this.interval),
+            canBeStopped: Boolean(this.interval),
+            canBeReseted: Boolean(this.countedSeconds)
+        }
+    }
+
+    get state(){
+        return {
+            time: this.getTime(),
+            actions: this.getAvailableActions()
+        }
+    }
+
     formatTime(timeUnits){
         return timeUnits > 9 ? String(timeUnits) : '0' + timeUnits;
     }
@@ -29,7 +47,8 @@ export default class CounterModel{
         this.interval = setInterval(() => {
             this.countedSeconds++;
             this.notifyObservers();
-        }, 1000)
+        }, 1000);
+        this.notifyObservers();
     }
 
     pause(){
@@ -37,6 +56,7 @@ export default class CounterModel{
             clearInterval(this.interval);
             this.interval = null;
         }
+        this.notifyObservers();
     }
 
     reset(){
@@ -47,12 +67,12 @@ export default class CounterModel{
 
     addObserver(newObserver){
         this.observers.push(newObserver);
-        newObserver.update(this.getTime());
+        newObserver.update(this.state);
     }
 
     notifyObservers(){
         for (let i = 0; i < this.observers.length; i++) {
-            this.observers[i].update(this.getTime());
+            this.observers[i].update(this.state);
         }
     }
 }
