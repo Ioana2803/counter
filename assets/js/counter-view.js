@@ -8,8 +8,6 @@ export default class CounterView{
     }
     
     init(){
-        console.log('Initialising Counter DOM elements...');
-        
         //creating container div
         this.containerDiv = document.createElement('div');
         this.containerDiv.classList.add('container');

@@ -22,9 +22,6 @@ export default class CounterModel{
     }
 
     getAvailableActions(){
-        console.log('detecting avlbl actions...');
-        console.log(`interval: ${this.interval}`);
-        
         return {
             canBeStarted: !Boolean(this.interval),
             canBeStopped: Boolean(this.interval),
