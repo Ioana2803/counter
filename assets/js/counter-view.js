@@ -1,8 +1,10 @@
 export default class CounterView{
-    constructor(parentDOMElement){
+    constructor(parentDOMElement, counterModel){
         this.parentDOMElement = parentDOMElement;
+        this.model = counterModel;
         
         this.init();
+        this.model.addObserver(this);
     }
     
     init(){
@@ -65,18 +67,21 @@ export default class CounterView{
         this.startBtn.classList.add('start', 'btnSt');
         this.buttonsDiv.append(this.startBtn);
         this.startBtn.innerText = 'Start';
+        this.startBtn.addEventListener('click', () => this.model.start());
 
         //creating the pause button
         this.pauseBtn = document.createElement('button');
         this.pauseBtn.classList.add('pause', 'btnSt');
         this.buttonsDiv.append(this.pauseBtn);
         this.pauseBtn.innerText = 'Pause';
+        this.pauseBtn.addEventListener('click', () => this.model.pause());
 
         //creating the reset button
         this.resetBtn = document.createElement('button');
         this.resetBtn.classList.add('reset', 'btnSt');
         this.buttonsDiv.append(this.resetBtn);
         this.resetBtn.innerText = 'Reset';
+        this.resetBtn.addEventListener('click', () => this.model.reset());
     }
     
     update(state){
