@@ -10,6 +10,7 @@ A minimal and responsive stopwatch application built with HTML, CSS, and JavaScr
 - Start, Pause, and Reset controls
 - Dark display on a vibrant cyan-to-purple gradient background
 - Clean minimal UI
+- Fully responsive design (mobile and desktop)
 
 ## 🛠️ Built With
 - HTML5
